@@ -1,0 +1,10 @@
+from textblob import TextBlob
+file = open(r'C:\Users\Lenovo\Desktop\New folder\python\Small Projects\Spelling Corrector\Incorrect Spelling.txt')
+a = file.read()
+print("original text : "+str(a))
+b = TextBlob(a)
+print("Corrected Text :"+str(b.correct()))
+file.close()
+d = open(r'C:\Users\Lenovo\Desktop\New folder\python\Small Projects\Spelling Corrector\Correct Spelling.txt','w')
+d.write(str(b.correct()))
+d.close()
